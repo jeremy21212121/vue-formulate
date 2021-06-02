@@ -59,7 +59,7 @@ export default {
         return this.context.model.map((item, index) => this.setId(item, index))
       }
       // This is an unset group
-      return (new Array(this.context.minimum || (this.context.hideEmpty ? 0 : 1))).fill('').map((_i, index) => this.setId({}, index))
+      return (new Array(this.context.minimum || ((this.context.repeatable && this.context.hideEmpty) ? 0 : 1))).fill('').map((_i, index) => this.setId({}, index))
     },
     formShouldShowErrors () {
       return this.context.formShouldShowErrors
