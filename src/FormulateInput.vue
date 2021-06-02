@@ -186,6 +186,10 @@ export default {
       type: Boolean,
       default: false
     },
+    hideEmpty: {
+      type: Boolean,
+      default: false
+    },
     validation: {
       type: [String, Boolean, Array],
       default: false
